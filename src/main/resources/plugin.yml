@@ -1,0 +1,9 @@
+name: fplugin
+version: '${project.version}'
+main: me.fplugin.Fplugin
+api-version: '1.20'
+commands:
+  heal:
+    description: Heal The Player
+    aliases: h
+    usage: /heal

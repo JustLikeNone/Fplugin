@@ -1,22 +1,31 @@
 package me.fplugin.commands;
 
-import me.fplugin.Msg;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
+
+import me.fplugin.CommandBase;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class explode implements CommandExecutor {
+public class explode {
+    public explode() {
+        new CommandBase("explode",0,1,true){
+            @Override
+            public boolean onCommand(CommandSender sender, String[] args){
+                Player player = (Player) sender;
+                float explosionPower;
+                if (args.length == 0){
+                    explosionPower = 2f;
+                }else {
+                    explosionPower = Float.parseFloat(args[0]);
+                }
+                player.getWorld().createExplosion(player,explosionPower);
+                return true;
+            }
 
-    @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if (!(commandSender instanceof Player)) {
-            Msg.send(commandSender, "&cOnly players can use this command");
-            return true;
-        }
-
-
-
-        return true;
+            @Override
+            public String getUsage() {
+                return "You've Exploded";
+            }
+        };
     }
+
 }

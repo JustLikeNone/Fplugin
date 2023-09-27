@@ -1,6 +1,7 @@
 package me.fplugin.commands;
 
 import me.fplugin.CommandBase;
+import me.fplugin.Msg;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -11,13 +12,12 @@ public class Feed {
             public boolean onCommand(CommandSender sender, String[] args){
                 Player player = (Player) sender;
                 player.setFoodLevel(20);
-
                 return true;
             }
 
             @Override
             public String getUsage(){
-                return "/feed";
+                return "You've been Fed";
             }
         }.enableDelay(2);
     }

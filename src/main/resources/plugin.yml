@@ -1,5 +1,5 @@
 name: fplugin
-version: '${project.version}'
+version: '0.0.1'
 main: me.fplugin.Fplugin
 api-version: '1.20'
 commands:

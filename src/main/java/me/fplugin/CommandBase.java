@@ -121,6 +121,4 @@ public abstract class CommandBase extends BukkitCommand implements CommandExecut
     }
 
     public abstract boolean onCommand(CommandSender sender, String[] args);
-
-    public abstract String getUsage();
 }

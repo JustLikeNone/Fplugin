@@ -13,14 +13,10 @@ public class heal {
             @Override
             public boolean onCommand(CommandSender sender, String[] strings) {
                 Player player = (Player) sender;
+                Msg.send(player, "You've been healed");
                 player.setHealth(20d);
                 player.setFoodLevel(20);
                 return true;
-            }
-
-            @Override
-            public String getUsage() {
-                return "You've been healed";
             }
         };
     }

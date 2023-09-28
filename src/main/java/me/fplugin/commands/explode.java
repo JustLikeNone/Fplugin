@@ -13,19 +13,13 @@ public class explode {
                 Player player = (Player) sender;
                 float explosionPower;
                 if (args.length == 0){
-                    explosionPower = 2f;
+                    explosionPower = 4f;
                 }else {
                     explosionPower = Float.parseFloat(args[0]);
                 }
                 player.getWorld().createExplosion(player,explosionPower);
                 return true;
             }
-
-            @Override
-            public String getUsage() {
-                return "You've Exploded";
-            }
         };
     }
-
 }

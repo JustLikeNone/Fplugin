@@ -20,7 +20,11 @@ public final class Fplugin extends JavaPlugin {
         new heal();
         new Feed();
         new explode();
-
+        new i();
+        new gma();
+        new gmc();
+        new gms();
+        new gmsp();
     }
 
     @Override

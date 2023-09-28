@@ -11,13 +11,9 @@ public class Feed {
             @Override
             public boolean onCommand(CommandSender sender, String[] args){
                 Player player = (Player) sender;
+                Msg.send(player, "You've been Fed");
                 player.setFoodLevel(20);
                 return true;
-            }
-
-            @Override
-            public String getUsage(){
-                return "You've been Fed";
             }
         }.enableDelay(2);
     }
